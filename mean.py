@@ -15,9 +15,7 @@ def get_mean(x):
     for i in x:
         x_m += i/len(x)
         aux.append(nv(i))
-    print('From the mean: ',x_m)
     
     err = np.std(aux)
-    print('Standard deviation: ', err)
     dx = np.sqrt(sd(x_m)**2+err**2)
     return ufloat(nv(x_m), dx)
